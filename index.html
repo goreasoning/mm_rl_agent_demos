@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="Hugo 0.88.1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href=""https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/normalize.css">
+
+	<title>In-Car MM-RL Agent 0.2</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<style>
+    .image-container {
+        display: flex; /* 使用flex布局使内容并排 */
+        justify-content: center; /* 水平居中显示 */
+        align-items: center; /* 垂直居中显示 */
+        margin-bottom: 20px; /* 下边距 */
+    }
+    .image-container img {
+        margin-right: 20px; /* 图片之间的间隔 */
+        width: 600px; /* 图片宽度 */
+    }
+    .image-container img:last-child {
+        margin-right: 0; /* 最后一张图片不需要右边距 */
+    }
+    .caption {
+        text-align: center; /* 标题居中 */
+        font-size: 16px; /* 字体大小 */
+    }
+</style>
+
+</head>
+
+
+<body data-new-gr-c-s-check-loaded="14.1091.0" data-gr-ext-installed="">
+
+<div class="container" >
+<header role="banner">
+</header>
+<main role="main">
+<article itemscope itemtype="https://schema.org/BlogPosting">
+
+
+<div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
+	<div class="text-center">
+	<h2>In-Car-Agent-Text-Speech-Interation-Demo-V0.2
+</h2>
+        <p class="fst-italic mb-0">
+			<br>
+			Deepgo Team
+		<p></p>
+        </p>
+        <p><b>deepreasoninggo@gmail.com</b></p>
+	</div>
+	<p><b>Abstract:</b>
+<!--		We introduce FunAudioLLM, ....-->
+		Both Text and Speech Generation are Produced Through RL-Training Multi-Modal Agents For Supporting Families in Cars.
+</p>
+</div>
+
+<!------ Application -------------------------->
+<div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
+	<h2 id="Zero-shot In-context Interation" style="text-align: center;">Zero-shot In-context Interation</h2>
+		<div class="table-responsive pt-3">
+			<table class="table table-hover pt-2">
+				<thead>
+				<tr>
+					<th style="vertical-align : middle;text-align: center">Language</th>
+					<th style="vertical-align : middle;text-align: center">Customer</th>
+					<th style="vertical-align : middle;text-align: center">For Machine Response</th>
+					<th style="vertical-align : middle;text-align: center">For Family Response</th>
+				</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td style="vertical-align : middle;text-align:center;" rowspan="1">Demo1</td>
+						<td style="vertical-align : middle;text-align:center;">带我去西湖。</td>
+						<td style="vertical-align : middle;text-align:center;">设置导航目的地为西湖。</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="2_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="2_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>
+					<tr>
+						<td style="vertical-align : middle;text-align:center;" rowspan="1">Demo2</td>
+						<td style="vertical-align : middle;text-align:center;">主驾座椅通风可以关吗？温暖模式更惬意！</td>
+						<td style="vertical-align : middle;text-align:center;">关闭主驾座椅通风。</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="1072_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="1072_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>
+
+					<tr>
+						<td style="vertical-align : middle;text-align:center;" rowspan="1">Demo3</td>
+						<td style="vertical-align : middle;text-align:center;">后排空调温度能调到最高一点不啊？后排暖呼呼!</td>
+						<td style="vertical-align : middle;text-align:center;">设置后排空调温度为28℃。</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="1094_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="1094_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>
+					<tr>
+						<td style="vertical-align : middle;text-align:center;" rowspan="1">Demo4</td>
+						<td style="vertical-align : middle;text-align:center;">副驾座椅通风能关不呀？温暖包裹超温馨！</td>
+						<td style="vertical-align : middle;text-align:center;">关闭副驾座椅通风。</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="1138_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="1138_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>
+					<tr>
+						<td style="vertical-align : middle;text-align:center;" rowspan="1">Demo5</td>
+						<td style="vertical-align : middle;text-align:center;">副驾能调最低吗，热得受不了……</td>
+						<td style="vertical-align : middle;text-align:center;">设置副驾空调温度为18℃。</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="1193_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="1193_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>
+					<tr>
+						<td style="vertical-align : middle;text-align:center;" rowspan="1">Demo6</td>
+						<td style="vertical-align : middle;text-align:center;">外循环能关吗，外面风好大……</td>
+						<td style="vertical-align : middle;text-align:center;">关闭空调外循环。</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="1218_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="1218_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>
+					<tr>
+						<td style="vertical-align : middle;text-align:center;" rowspan="1">Demo7</td>
+						<td style="vertical-align : middle;text-align:center;">自动模式能开吗，交给它吧……</td>
+						<td style="vertical-align : middle;text-align:center;">打开空调自动模式。</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="1219_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="1219_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>
+					<tr>
+						<td style="vertical-align : middle;text-align:center;" rowspan="1">Demo8</td>
+						<td style="vertical-align : middle;text-align:center;">除霜模式能开吗，雾气看不清……</td>
+						<td style="vertical-align : middle;text-align:center;">打开除霜模式。</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="1231_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="1231_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>
+					<tr>
+						<td style="vertical-align : middle;text-align:center;" rowspan="1">Demo9</td>
+						<td style="vertical-align : middle;text-align:center;">后排能自动开吗，贴心点吧……</td>
+						<td style="vertical-align : middle;text-align:center;">打开后排空调。</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="1235_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="1235_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>
+					<tr>
+						<td style="vertical-align : middle;text-align:center;" rowspan="1">Demo10</td>
+						<td style="vertical-align : middle;text-align:center;">主驾风量能低吗，风大好吵呀……</td>
+						<td style="vertical-align : middle;text-align:center;">设置主驾空调风量为20%。</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="1237_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="1237_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>
+					<tr>
+						<td style="vertical-align : middle;text-align:center;" rowspan="1">Demo11</td>
+						<td style="vertical-align : middle;text-align:center;">后排左能3档吗，刚刚好吧……</td>
+						<td style="vertical-align : middle;text-align:center;">设置后排左侧座椅为3档。</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="1242_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="1242_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>
+					<tr>
+						<td style="vertical-align : middle;text-align:center;" rowspan="1">Demo12</td>
+						<td style="vertical-align : middle;text-align:center;">主驾通风关一把不,心急如焚</td>
+						<td style="vertical-align : middle;text-align:center;">关闭主驾座椅通风。</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="2121_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="2121_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>
+					<tr>
+						<td style="vertical-align : middle;text-align:center;" rowspan="1">Demo13</td>
+						<td style="vertical-align : middle;text-align:center;">前除雾自动开一把不,心乱啊!</td>
+						<td style="vertical-align : middle;text-align:center;">关闭前窗除雾。</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="2146_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="2146_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>
+					<tr>
+						<td style="vertical-align : middle;text-align:center;" rowspan="1">Demo14</td>
+						<td style="vertical-align : middle;text-align:center;">后视镜加热自动开一把不,慌里慌张!</td>
+						<td style="vertical-align : middle;text-align:center;">打开外后视镜加热。</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="2149_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="2149_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+</div>
+</html>
